@@ -1,55 +1,183 @@
 <!DOCTYPE html>
 <html>
     <style>
+    .card-container {
+  height: 600px;
+  perspective: 600;
+  position: relative;
+  width: 500px;
+  top:60px;
+
+}
+.card {
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  width: 100%;
+}
+.card:hover {
+  transform: rotateY(180deg);
+}
+.card .side {
+  backface-visibility: hidden;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  background-color:red;
+  color:white;
+  font-size:50px;
+}
+.card .back {
+  transform: rotateY(180deg);
+  background-color:green;
+  font-size:17px;
+ }
+body {
+        background-color:blue;
+        color:white;
+        font-family:monospace;
+    }
       #heading-number-1 {
             text-align:left;
         } 
         #heading-image {
             width:300px;
+            position:relative;
+            top:50px;
         }
         #paragraph-image {
             width:300px;
+            position:relative;
+            top:50px;
         }
         #linebreak-image {
             width:300px;
+            position:relative;
+            top:50px;
         }
         #italic-image {
             width:300px;
+            position:relative;
+            top:50px;
         }
+      #Content {
+          font-size:20px;
+      }
+        #CSS {
+            position:absolute;
+            width:500px;
+            float:right;
+            top:150px;
+            right:100px;
+            font-size:17px;
+            background-color:green;
+        }
+        #CSS-header {
+            position:absolute;
+            top:100px;
+            left:900px;
+        }
+        #HTML-header {
+              position:absolute;
+            top:103px;
+            right:1200px;
+            font-size:40px;
+        }
+            #Tags{
+                position:relative;
+                top:50px;
+            }
+            #Attributes{
+                position:relative;
+                top:50px;
+            }
+         #Examples{
+             position:relative;
+                top:50px;
+         }
+        #header {
+            position:relative;
+            top:50px;
+        }
+      #paragraph {
+          position:relative;
+            top:50px;
+      }
+      #linebreak{
+          position:relative;
+            top:50px;
+      }
+      #italic {
+          position:relative;
+            top:60px;
+      }
     </style>
             <link rel="stylesheet" href="navbar.css" type="text/css" />
     <head>
          <title>HTML/CSS</title>
-    </head>
-        <body>
-               
-        <ul id="navbar">
+         <ul id="navbar">
             <li><a href="index.html "></index>Home</a></li>
             <li><a href="Aboutme.html">About Me</a></li>
- <h1 id="heading-number-1">HTML/CSS</h1>   
         </ul>
-    <body>
-<p>
-               HTML, which stands for HyperText Markup Language, is a programming language that is used to create the structure and layout of a website. In 1990, Tim-Berners-Lee had created HTML. HTML is written using tags enclosed in angle brackets.
+         <h1 id="heading-number-1">HTML/CSS</h1>
+    </head>
+        <body>
+            <h1 id="HTML-header">HTML</h1>
+            <div class="card-container">
+  <div class="card">
+    <div class="side">To Learn About HTML, HOVER OVER HERE!!!</div>
+    <div class="side back">HTML is a programming language that is used to create the structure and layout of a website. 
+    HTML is an acronym for HyperText Markup Language. 
+    The HT stands for HyperText, which is a text that contains links into other texts, creating an interconnected system of links that share information. 
+    The ML in HTML stands for Markup Language. 
+    A Markup Language is a system of annotating a document so that is distinguishable from the text. 
+    Marking these pieces enables for the adjustment of pieces of code, whether that be giving emphasis to a phrase, or setting aside pieces of the text. 
+    HTML is the foundation of all web pages, and is vital for the function of these pages. 
+    The concept of HTML was thought up in 1989, by Tim Berners-Lee as he was working in the European Laboratory for Particle Physics (CERN) in Geneva, Switzerland. 
+    At first it was invented for researchers living in remote places in the world to gather information; instead, it was the publishing language for the World Wide Web. 
+    HTML is written in the form of using HTML elements consisting of tags. Generally, there is a tag before and after a piece of content is written, such as in the <body> tag. 
+    Before the content is written, a <body> is placed before the code, and a </body> is placed after the code. 
+    Notice how a slash is placed in the end tag, this is to distinguish that this an end tag. 
+    In some cases, there is no end tag needed, and only a beginning tag is used in this case.  
+</div>
+<!--Second Animation-->
+           
+</div>
+  </div>
+<div id="Content">
+    <h1 id="CSS-header">CSS</h1>
+            <p id="CSS">
+                As HTML grew, the idea of presenting the webpages was brought up. 
+                Using HTML provided for information to be shared, and the design that could be done was never drastic. 
+                To solve this problem, a new language was created to focus solely on the design factor on web pages, this was CSS. 
+                CSS, which stands for Cascading Style Sheets, is a programming language that is used as a way to present a website in a more attractive way. 
+                It was initially invented in 1996, by Hakon Wium Lie, who worked with Tim-Berners-Lee, creator of HTML. 
+                Both worked at CERN, a European research facility. 
+                With CSS, web pages can be designed in a infinite amount of ways, creating unique, better looking and structured websites. 
+                CSS is written by using a number of English keywords and a set of rules to specify the style being implemented. 
+                This is done through the usage of declaration blocks (curly brackets) and selectors, which are used to declare which specific piece of text is being designed. 
+                These selectors can apply to an element found in the text, such as a header, or a specified attribute found in an element. 
+                Once these selectors are set, and the declaration blocks are placed, properties are used to design the web page, creating a more visually appealing web page. 
+
             </p>
-            <p>
-                CSS, which stands for Cascading Style Sheets, is a programming language that is used as a way to design and present a website. It was initially invented in 1996, by Hakon Wium Lie, who worked with Tim-Berners-Lee, creator of HTML. CSS is written by using a number of English keywords to specify the style being implemented. 
-            </p>
-            <p>
+            <p id="Tags">
                 Tags are keywords within a web page that make the browser determine how to display and format the content. Tags are written with two parts, an opening and closing part. These tags are wrapped with angle brackets, such as <>.
             </p>
+            <p id="Attributes">
                 Attributes are added to tags to modify the tag to perform certain functions. These attributes can be changed by adding certain keywords to the tag. *INSERT EXAMPLE*
             </p>
-            <p>
+            <p id="Examples">
                 Examples of Tags: <br>
                 <img src="http://triplethreedesigns.com/wp-content/uploads/2014/06/h1-tag.gif" id="heading-image"> <br>
-                The header tag is used to emphasis words in a website's text. It can be used for titles, and other headings. <br>
+                <p id="header">The header tag is used to emphasis words in a website's text. It can be used for titles, and other headings.</p> <br> 
                 <img src="http://www.stwi.in/images/blog/html-code/p.jpg" id="paragraph-image"><br>
-                The paragraph tag is used for defining a paragraph in a text. <br>
+                <p id="paragraph">The paragraph tag is used for defining a paragraph in a text.</p> <br>
                 <img src="http://www.stwi.in/images/blog/html-code/br.jpg" id="linebreak-image"><br>
-                The break tag is used for line breaks in a text.<br>
+                <p id="linebreak">The break tag is used for line breaks in a text.</p><br>
                 <img src="http://www.stwi.in/images/blog/html-code/em.jpg" id="italic-image"> <br>
-                The emphasized text tag is used for italicizing text.
+                <p id="italic">The emphasized text tag is used for italicizing text.</p>
             </p>
+            </div>
     </body>
 </html>
