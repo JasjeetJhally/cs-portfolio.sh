@@ -44,22 +44,22 @@ body {
         #heading-image {
             width:300px;
             position:relative;
-            top:50px;
+            top:2px;
         }
         #paragraph-image {
             width:300px;
             position:relative;
-            top:50px;
+            bottom:50px;
         }
         #linebreak-image {
             width:300px;
             position:relative;
-            top:50px;
+            bottom:70px;
         }
         #italic-image {
             width:300px;
             position:relative;
-            top:50px;
+            bottom:90px;
         }
       #Content {
           font-size:20px;
@@ -92,26 +92,51 @@ body {
                 position:relative;
                 top:50px;
             }
-         #Examples{
-             position:relative;
-                top:50px;
-         }
+        
         #header {
             position:relative;
-            top:50px;
+            top:-170px;
+            width:500px;
+            left:350px;
+            background-color:black;
+            
+        
         }
       #paragraph {
-          position:relative;
-            top:50px;
+            position:relative;
+            bottom:210px;
+            width:500px;
+            left:350px;
+            background-color:green;
       }
       #linebreak{
           position:relative;
-            top:50px;
+            bottom:210px;
+            width:500px;
+            left:350px;
+            background-color:orange;
       }
       #italic {
           position:relative;
-            top:60px;
+            bottom:250px;
+            width:500px;
+            left:350px;
+            background-color:purple;
       }
+            #tag-header{
+                position:relative;
+                top:75px;
+            }
+            #attribute-header {
+                position:relative;
+                top:75px;
+            }
+            #example-tag {
+                position:relative;
+                top:25px;
+            }
+           
+      
     </style>
             <link rel="stylesheet" href="navbar.css" type="text/css" />
     <head>
@@ -161,23 +186,29 @@ body {
                 Once these selectors are set, and the declaration blocks are placed, properties are used to design the web page, creating a more visually appealing web page. 
 
             </p>
+           <h2 id="tag-header">What are tags?</h2>
             <p id="Tags">
-                Tags are keywords within a web page that make the browser determine how to display and format the content. Tags are written with two parts, an opening and closing part. These tags are wrapped with angle brackets, such as <>.
+                Tags are keywords within a web page that make the browser determine how to display and format the content. Tags are written with two parts, an opening and closing tag. These tags are wrapped with angle brackets, such as <>.
             </p>
+            <h2 id="attribute-header">What are attributes?</h2>
             <p id="Attributes">
-                Attributes are added to tags to modify the tag to perform certain functions. These attributes can be changed by adding certain keywords to the tag. *INSERT EXAMPLE*
+                Attributes are added to tags to modify the tag to perform certain functions. These attributes can be changed by adding certain keywords to the tag, such as class or id. Here is an example of an id, <p id=”paragraph”>.
+
             </p>
-            <p id="Examples">
-                Examples of Tags: <br>
-                <img src="http://triplethreedesigns.com/wp-content/uploads/2014/06/h1-tag.gif" id="heading-image"> <br>
+            <h2 id="example-tag">Examples of Tags:</h2>
+               <p> 
+                <img src="http://triplethreedesigns.com/wp-content/uploads/2014/06/h1-tag.gif" id="heading-image"> <br> 
                 <p id="header">The header tag is used to emphasis words in a website's text. It can be used for titles, and other headings.</p> <br> 
                 <img src="http://www.stwi.in/images/blog/html-code/p.jpg" id="paragraph-image"><br>
+               
                 <p id="paragraph">The paragraph tag is used for defining a paragraph in a text.</p> <br>
+                
                 <img src="http://www.stwi.in/images/blog/html-code/br.jpg" id="linebreak-image"><br>
                 <p id="linebreak">The break tag is used for line breaks in a text.</p><br>
+                
                 <img src="http://www.stwi.in/images/blog/html-code/em.jpg" id="italic-image"> <br>
                 <p id="italic">The emphasized text tag is used for italicizing text.</p>
-            </p>
+        </p>
             </div>
     </body>
 </html>
