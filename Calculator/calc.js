@@ -27,4 +27,23 @@ function doMath() {
         answer = parseInt(input1.value) / parseInt(input2.value);
         display.innerHTML = answer;
     }
+    
+    if (dropdown.value == "^"){
+        answer = Math.pow(input1.value,input2.value);
+        display.innerHTML = answer;
+    }
+    
+    if (dropdown.value == "sqrt"){
+        answer = Math.sqrt(input1.value);
+        display.innerHTML = answer;
+        }
+    if (dropdown.value == "cbrt"){
+        answer = Math.cbrt(input1.value,input1.value);
+        display.innerHTML = answer;
+    }
+    
+    if (dropdown.value == "round"){
+        answer = Math.round(input1.value)
+        display.innerHTML = answer;
+    }
 }
