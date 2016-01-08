@@ -1,26 +1,37 @@
 <!DOCTYPE HTML>
 <html>
     <style>
+         #title{
+             font-family:arial;
+             width:700px;
+             position:relative;
+             left:450px;
+             font-size:50px;
+             color:white;
+             
+             
+         }
         #warriors{
             font-family:arial;
+            position:relative;
+            left:500px;
+            color:white;
         }
         #giants{
             font-family:arial;
-
-        }
+             color:white;
+            }
         #sharks{
             font-family:arial;
-            
-
+             color:white;
         }
         #niners{
             font-family:arial;
-
+             color:white;
         }
         #warriorimage {
             width:500px;
             height:250px;
-            
         }
         #giantsimage{
             width:500px;
@@ -33,35 +44,108 @@
         #ninersimage{
            width:500px;
            height:350px;
+        }
+        body{background-image:url("http://hdwallpapersfit.com/wp-content/uploads/2015/04/dark-blue-background-wallpapers.jpg");background-repeat:repeat;background-size:cover;}
+        
+        body{
+            width:500px;
+            height:500px;
+        }
+        
+            
+        
+            
+    
+        #warriorsinfo{
+            background-color:blue;
+            width:550px;
+            position:relative;
+            left:500px;
+            font-size:25px;
+        }
+        #warriorgroup{
+            position:relative;
+            left:500px;
+        }
+        #giantsgroup{
+            position:relative;
+            left:500px;
+            
             
         }
-        body{
-            background-color:orange;
+        #giantsinfo{
+           background-color:white;
+           width:500px;
+           position:relative;
+           font-size:25px;
         }
+        #sharksgroup{
+            position:relative;
+            left:500px;
+        }
+        #sharksinfo{
+            background-color:red;
+            width:500px;
+            position:relative;
+            font-size:25px;
+        }
+        #ninersgroup{
+            position:relative;
+            left:500px;
+            
+        }
+        #ninersinfo{
+            background-color:yellow;
+            width:500px;
+            position:relative;
+          
+           font-size:25px;
+        }
+        #sportsteams{
+            
+        }
+        
     </style>
 <head>
-    <title></title>
+    <title>BayArea Sports</title>
+    
 </head>
+<h1 id="title"><ul>Bay Area Sports Teams</ul></h1>
 <body>
+    <div id=sportsteams> 
+    
     <h1 id="warriors">Golden State Warriors</h1>
-    <div id="basketball" >
+    <div id="warriorgroup" >
                  <img id="warriorimage" src= "http://44d5i01rkpt329p8yqqf89h5.wpengine.netdna-cdn.com/wp-content/uploads/2015/05/Golden-State-Warriors-1.jpg">
     </div>
-    <div id="warriorinfo">
+    <div id="warriorsinfo">
         
     </div>
+    
+    <div id="giantsgroup">
     <h1 id="giants">San Francisco Giants</h1>
     <div id="baseball">
     <img id="giantsimage" src= "http://sanfrancisco.giants.mlb.com/mlb/images/team_logos/social_media/og_1200x630_image/sf_1200x630.jpg">
          </div>
+         
          <div id="giantsinfo"></div>
+         </div>
+         <div id="sharksgroup">
     <h1 id="sharks">San Jose Sharks</h1>
     <div id="hockey">
+        
 <img id="sharksimage" src= "http://1.cdn.nhle.com/sharks/images/upload/2013/01/325x183_SharksLogo_Thumb.jpg">
     </div>
+    <div id="sharksinfo"></div>
+          </div>
+     <div id=ninersgroup>
      <h1 id="niners">San Francisco 49ers</h1>
     <div id="football">
+        
        <img id="ninersimage" src= "https://pbs.twimg.com/profile_images/643962727694647297/n-FiKz5E.jpg">
+    </div>
+    <div id="ninersinfo"></div>
+    </div>
     </div>
     <script src="info.js"></script>
 </body>
