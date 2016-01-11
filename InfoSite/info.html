@@ -5,16 +5,13 @@
              font-family:arial;
              width:700px;
              position:relative;
-             left:450px;
+             left:350px;
              font-size:50px;
              color:white;
-             
-             
          }
+         /*Here are the titles of each sports team, each piece customizes the font type and color.*/
         #warriors{
             font-family:arial;
-            position:relative;
-            left:500px;
             color:white;
         }
         #giants{
@@ -29,6 +26,7 @@
             font-family:arial;
              color:white;
         }
+        /* This is where all of the page's images are shaped into the appropriate sizes.*/
         #warriorimage {
             width:500px;
             height:250px;
@@ -43,101 +41,109 @@
         }
         #ninersimage{
            width:500px;
-           height:350px;
+           height:275px;
         }
-        body{background-image:url("http://hdwallpapersfit.com/wp-content/uploads/2015/04/dark-blue-background-wallpapers.jpg");background-repeat:repeat;background-size:cover;}
-        
+        /* The page's margins and background color are found here.*/
         body{
             width:500px;
             height:500px;
+            background-color:black;
         }
-        
-            
-        
-            
-    
+        /*These next pieces are for the customization of the position both the teams logo and title, in addition to the dropdown text.*/
+        #warriorgroup{
+            position:relative;
+            left:0px;
+        }
         #warriorsinfo{
             background-color:blue;
             width:550px;
-            position:relative;
-            left:500px;
+            position:absolute;
+            left:0px;
             font-size:25px;
-        }
-        #warriorgroup{
-            position:relative;
-            left:500px;
         }
         #giantsgroup{
             position:relative;
-            left:500px;
-            
-            
+            left:750px;
+            bottom:340px;
         }
         #giantsinfo{
            background-color:white;
            width:500px;
-           position:relative;
+           position:absolute;
            font-size:25px;
+           left:750px;
+           top:440px
         }
         #sharksgroup{
             position:relative;
-            left:500px;
+            left:0px;
+            bottom:50px;
         }
         #sharksinfo{
-            background-color:red;
+            background-color:rgb(0,128,128);
             width:500px;
-            position:relative;
+            position:absolute;
             font-size:25px;
+            bottom:110px;
         }
         #ninersgroup{
             position:relative;
-            left:500px;
-            
+            left:750px;
+            bottom:390px;
         }
         #ninersinfo{
-            background-color:yellow;
+            background-color:red;
             width:500px;
-            position:relative;
-          
-           font-size:25px;
+            position:absolute;
+            font-size:25px;
         }
-        #sportsteams{
-            
+        /*Here is where the welcome text is styled.*/ 
+        #BayArea{
+            float:left;
+            font-size:30px;
+            font-family:impact;
+            background-color:white;
+            width:1300px;
         }
-        
     </style>
+<!--Both the page and tab title are written here.-->
 <head>
     <title>BayArea Sports</title>
-    
 </head>
-<h1 id="title"><ul>Bay Area Sports Teams</ul></h1>
+  <h1 id="title"><ul>Bay Area Sports Teams</ul></h1>
+
 <body>
-    <div id=sportsteams> 
-    
+    <!--The welcoming text is formed here -->
+    <p id="BayArea">Welcome to an Information Page on some of the professional sports teams in the San Francisco Bay Area! To learn more about each team presented, click on the teams logo to drop down more information!</p>
+    <!-- This is where the Warrior team logo, title, and empty div to allow the dropdown in the JS are found.-->
+    <div id="warriorgroup">
     <h1 id="warriors">Golden State Warriors</h1>
-    <div id="warriorgroup" >
-                 <img id="warriorimage" src= "http://44d5i01rkpt329p8yqqf89h5.wpengine.netdna-cdn.com/wp-content/uploads/2015/05/Golden-State-Warriors-1.jpg">
-    </div>
+    <img id="warriorimage" src= "http://44d5i01rkpt329p8yqqf89h5.wpengine.netdna-cdn.com/wp-content/uploads/2015/05/Golden-State-Warriors-1.jpg">
+    
     <div id="warriorsinfo">
-        
+    
     </div>
     
+    <!-- This is where the Giants team logo, title, and empty div to allow the dropdown in the JS are found.-->
     <div id="giantsgroup">
     <h1 id="giants">San Francisco Giants</h1>
-    <div id="baseball">
     <img id="giantsimage" src= "http://sanfrancisco.giants.mlb.com/mlb/images/team_logos/social_media/og_1200x630_image/sf_1200x630.jpg">
          </div>
          
-         <div id="giantsinfo"></div>
+         <div id="giantsinfo">
+             
          </div>
-         <div id="sharksgroup">
-    <h1 id="sharks">San Jose Sharks</h1>
-    <div id="hockey">
         
-<img id="sharksimage" src= "http://1.cdn.nhle.com/sharks/images/upload/2013/01/325x183_SharksLogo_Thumb.jpg">
+    <!-- This is where the Sharks team logo, title, and empty div to allow the dropdown in the JS are found.-->     
+    <div id="sharksgroup">
+    <h1 id="sharks">San Jose Sharks</h1>
+    <img id="sharksimage" src= "http://1.cdn.nhle.com/sharks/images/upload/2013/01/325x183_SharksLogo_Thumb.jpg">
     </div>
-    <div id="sharksinfo"></div>
-          </div>
+    <div id="sharksinfo">
+        
+    </div>
+         
+    <!-- This is where the Niners team logo, title, and empty div to allow the dropdown in the JS are found.-->     
      <div id=ninersgroup>
      <h1 id="niners">San Francisco 49ers</h1>
     <div id="football">
@@ -146,7 +152,7 @@
     </div>
     <div id="ninersinfo"></div>
     </div>
-    </div>
+    <!-- The connection between the HTML and JS is here.-->
     <script src="info.js"></script>
 </body>
 </html>
