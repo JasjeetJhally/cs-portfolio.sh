@@ -1,6 +1,12 @@
 <!DOCTYPE HTML>
 <html>
     <style>
+         #navbar{
+             position:relative;
+             bottom:1650px;
+             left:50px;
+             width:1200px;
+         }
          #title{
              font-family:arial;
              width:700px;
@@ -56,7 +62,7 @@
         }
         #warriorsinfo{
             background-color:blue;
-            width:550px;
+            width:500px;
             position:absolute;
             left:0px;
             font-size:25px;
@@ -84,7 +90,7 @@
             width:500px;
             position:absolute;
             font-size:25px;
-            bottom:110px;
+            bottom:160px;
         }
         #ninersgroup{
             position:relative;
@@ -104,10 +110,14 @@
             font-family:impact;
             background-color:white;
             width:1300px;
+            position:relative;
+            bottom:50px;
         }
     </style>
+
 <!--Both the page and tab title are written here.-->
 <head>
+     <link rel="stylesheet" href="navbar.css" type="text/css"/>
     <title>BayArea Sports</title>
 </head>
   <h1 id="title"><ul>Bay Area Sports Teams</ul></h1>
@@ -154,5 +164,10 @@
     </div>
     <!-- The connection between the HTML and JS is here.-->
     <script src="info.js"></script>
+            <ul id="navbar">
+            <li><a href="Aboutme.html ">About Me</a></li>
+            <li><a href="html-css.html">HTML/CSS</a></li>
+            <li><a href="calc.html">Calculator</a></li>
+            <li><a href="index.html">Home</a></li>
 </body>
-</html>
+</html> 
