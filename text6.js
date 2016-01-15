@@ -4,11 +4,11 @@ var dec7 = document.getElementById("smart");
 var dec8 = document.getElementById("smart1");
 
 image7.addEventListener("click", function(){
-    dec7.innerHTML = "DJ Khaled Quote";
+    dec7.innerHTML = "Always have faith, always have hope.";
    
 });
                        
 image8.addEventListener("click", function(){
-    dec8.innerHTML = "DJ Khaled Quote";
+    dec8.innerHTML = "The key to success is coco butter.";
   
 });
