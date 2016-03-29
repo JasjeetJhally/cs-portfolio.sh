@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        #navbar{
+             position:relative;
+         }
+         body{
+             background-color:brown;
+         }
+         #title{
+             color:white;
+             text-align:center;
+         }
+         #heading1{
+             color:white;
+             text-align:center;
+         }
+         #heading2{
+             color:white;
+             text-align:center;
+         }
+         #heading3{
+             color:white;
+             text-align:center;
+         }
+         #whatisit{
+             font-family:monospace;
+         }
+         #code1{
+         font-family:monospace;  
+         }
+         #code2{
+         font-family:monospace;  
+         }
+         #code3{
+         font-family:monospace;  
+         }
+         #code4{
+        font-family:monospace;  
+         }
+         #code5{
+        font-family:monospace;  
+         }
+         #code6{
+        font-family:monospace;  
+         }
+         #code7{
+        font-family:monospace;  
+         }
+         #code8{
+        font-family:monospace;  
+         }
+         #whatilearn{
+             font-family:monospace;
+         }
+    </style>
+    <head>
+        <title>Vindinium</title>
+    </head>
+    
+    <body>
+         <link rel="stylesheet" href="navbar.css" type="text/css" />
+         <ul id="navbar">
+            <li><a href="index.html "></index>Home</a></li>
+            <li><a href="html-css.html">HTML/CSS</a></li>
+            <li><a href="info.html">InfoSite</a></li>
+            <li><a href="calc.html">Calculator</a></li>
+            <li><a href="text.html">Khaled Game</a></li>
+            <li><a href="Vindinium.html">Vindinium</a></li>
+            </ul>
+<h1 id="title">Vindinium</h1>
+
+<h2 id="heading1">What is it?</h2>
+<p id="whatisit">Vindinium is a turn-based game with four players, also known as heros. The main objective of the game is to collect the most amount of gold in a set amount of total turns; in most cases, this is 1200 turns, with each players receiving 300 turns. In order to collect gold, players must take control of the numerous gold mines located all around the map. To obtain these mines, the player must defeat a goblin guarding the mine. Once defeated, the goblin will then defend the player&rsquo;s mine from other players; the player receives one piece of gold per turn for every mine that they control. In addition to obtaining mines, the players can also attack other players. The survivor of an attack against another player receives control of all the mines that the defeated player had already obtained. A player is killed when their life points have all elapsed, and when killed, the player automatically respawns with all the gold that they previously had, but no control over the mines that they previously acquired. During the game, players can visit taverns that contain <q>cream soda</q>, and restore their life points for the price of a piece of gold. In the end, the hero with the most gold is deemed the winner of the match. 
+</p>
+
+<h2 id="heading2">The Code Behind My AI</h2>
+
+<!--Code Block 1-->
+<pre><code>
+    //Identifies the bot with the most mines controlled and attacks that said bot.
+    var richestBot = enemyBots[0];
+    for (i = 0; i < enemyBots.length; i++) {
+    if (bot.yourBot.mineCount < enemyBots[i].mineCount) {
+    richestBot = enemyBots[i];
+    }
+}
+</code></pre>
+<p id="code1">This block of code contains a for loop that identifies which bot controls the most amount of mines. With my main objective focusing more on attacking other players, rather than go for the free mines available, I wanted to make sure that the bot that I did attack, would be the won with the most, as the risk taken attacking this player results in a larger reward. The for loop contains three statements; i=0, i < enemyBots.length, and i++. The first statement, i=0, sets the variable at 0, and is executed before the loop is begins. Next, the second statement,
+i < enemyBots.length, defines the condition being implemented for the for loop. In this case, it states that the variable must be less than that of the enemy bot&rsquo;s length. The third statement, i++, allows for the loop to increase in value, each time that the code in the block is run. The code block in the for loop is an if statement that reads that contains a condition which states that if my bot&rsquo;s mine count is less than another enemy&rsquo;s mine count, then that <q>richest</q> bot, becomes my enemy bot, and the bot that I will go on to attack.</p>
+
+<!--Code Block 2-->
+<pre><code>
+    //Identifies the closest enemy Bot by looking at the difference between my bot and the other bots.
+    var closestBot = enemyBots[0];
+    for (i = 0; i < enemyBots.length; i++) {
+    if (bot.findDistance(myPos, [closestBot.pos.x, closestBot.pos.y]) > bot.findDistance(myPos, [enemyBots[i].pos.x, enemyBots[i].pos.y])) {
+    closestBot = enemyBots[i];
+    }
+}
+</code></pre>
+<p id="code2">The next block of code is very similar to the previous block of code. Like the last block of code, it has a for loop with the same statements, and also an if statement to run with the for loop. The main purpose that this code block has is that it targets the bot that is closest to my bot. Because of this, I can use this code block to target the closest bots for certain situations. The for loop in this block of code contains three statements; i=0, i< enemyBots.length, and i++. The first statement, i=0, sets the variable at 0, and is executed before the loop is begins. Next, the second statement,
+i < enemyBots.length, defines the condition being implemented for the for loop. In this case, it states that the variable must be less than that of the enemy bots length. The third statement, i++, allows for the loop to increase in value, each time that the code in the block is run. For the if statement&rsquo;s condition, it finds the position of my bot, and the position of the closest bot. The code then makes sure that the my distance from the closest bot is less than the distance to other bots. When this is true, the closest bot becomes the enemy bot that I go on to attack.</p>
+
+<!--Code Block 3-->
+<pre><code>
+    //The first component, the if, is related to the action of going to the tavern to refill the health of the bot.
+    if (bot.yourBot.life <= 40 || bot.yourBot.mineCount >= 4 && bot.yourBot.life <= 99 && bot.yourbot.gold > 300) {
+    task = "drink";
+    }
+</code></pre>
+<p id="code3">The if portion of the else if statement is shown above. The if condition is true when my bot&rsquo;s mine count is less than or equal to 40, or my bot&rsquo;s mine count is greater than or equal to 99, and my bot&rsqus gold count is greater than 300. The or is shown with the ||, indicating that the condition can be true either way. If this portion of the else if statement is true, then the bot will perform the <q>drink</q> task, which will be explained further below. In short, the drink task will make my bot go to the nearest tavern and have a drink.</p>
+
+<!--Code Block 4-->
+<pre><code>
+    //The second component, the else if, relates to the attack action that the bot takes against other bots.
+    else if (bot.yourBot.life >= 55 && bot.yourBot.mineCount < 1) {
+    task="attack";
+    }
+</code></pre>
+<p id="code4">The else if portion of the else if statement is shown above. The else if condition is true when my bot&rsquo;s lie is greater than or equal to 55, and my bot&rsquo;s mine count is less than 1, which is basically 0, as a bot cannot have negative mines. If the else if portion is true, then the bot will execute the <q>attack</q> task which is further explained down below. Basically, the attack task allows my bot to go forth and attack other bots.</p>
+
+<!--Code Block 5-->
+<pre><code>
+    //The final component, the else, is in relation to the bot going after unoccupied mines.
+    else {
+    task= "freemines";
+    }
+</code></pre>
+<p id="code5">Finally, the else portion of the else if statement is shown above. Since this portion is implemented when both the if condition and the else if condition are false, the else does not have a condition. If this is the case, the bot performs the <q>freemines</q> task, which when executed, the bot will begin to actively seek out and claim free mines that are available.</p>
+
+<!--Code Block 6-->
+<pre><code>
+    //The first condition, drink, will take the position of the bot and identify the closest tavern. It will then move towards that tavern.
+    if (task === "drink") {
+    var taverns = bot.taverns[0];
+    for (i = 0; i < bot.taverns.length; i++) {
+    if (bot.findDistance(myPos, bot.taverns) > bot.findDistance(myPos, bot.taverns[i])) {
+    taverns = bot.taverns[i];
+    }
+}
+    console.log("Moving to Tavern");
+    myDir = bot.findPath(myPos, closesttavern);
+    }
+</code></pre>
+<p id="code6">As stated above, here is how the task, <q>drink</q> is executed through the bot. A for loop is used in this block of code. The for loop in this block of code contains three statements; i=0, i< bot.taverns.length, and i++. The first statement, i=0, sets the variable at 0, and is executed before the loop is begins. Next, the second statement,
+i < bot.taverns.length, defines the condition being implemented for the for loop. In this case, it states that the variable must be less than that of the tavern&rsquo;s length. The third statement, i++, allows for the loop to increase in value, each time that the code in the block is run. The if conditional that comes with the for loop finds the position of a tavern, and the current position of my bot. It then sees that if my position to a tavern is closer than other players. When this is true, my bot will then move to the tavern and use its facilities to regain life points. As this happens, the message <q>Moving to Tavern</q> is posted.</p>
+
+<!--Code Block 7-->
+<pre><code>
+    if (task = "attack") {
+    console.log("Attacking nearest Bot!");
+    myDir = bot.findPath(myPos, [richestBot.pos.x, richestBot.pos.y]);
+    }
+</code></pre>
+<p id="code7">Here, the <q>attack</q> task is shown. Since the bot will automatically attack a bot that is the closest, setting the bot&rsquo;s direction to that of the richest bot allows the bot to move towards the bot with the most mines. When this happens, <q>Attacking the nearest Bot!</q> is displayed. </p>
+
+<!--Code Block 8-->
+<pre><code>
+    if(task === "freemines") {
+    var closestMine = bot.freeMines[0];
+    for(i = 0; i < bot.freeMines.length; i++) {
+    if(bot.findDistance(myPos, closestMine) > bot.findDistance(myPos, bot.freeMines[i])) {
+    closestMine = bot.freeMines[i];
+    }
+}
+        console.log("Getting this freemine!");
+        myDir = bot.findPath(myPos, closestMine);
+        }
+</code></pre>
+<p id="code8">As stated above, here is how the task, <q>freemines</q> is executed through the bot. A for loop is used in this block of code. The for loop in this block of code contains three statements; i=0, i< bot.freeMines.length, and i++. The first statement, i=0, sets the variable at 0, and is executed before the loop is begins. Next, the second statement,
+i < bot.freeMines.length, defines the condition being implemented for the for loop. In this case, it states that the variable must be less than that of the freeMine&rsquo;s length. The third statement, i++, allows for the loop to increase in value, each time that the code in the block is run. The if conditional that comes with the for loop finds the position of a free mine, and the current position of my bot. It then sees that if my position to a free mine is closer than other players. When this is true, my bot will then move to the free mine and take over the free mine. As this happens, the message <q>Getting this freemine!</q> is posted.</p>
+
+<h2 id="heading3">What I learned</h2>
+<p id="whatilearn">Through this project, I was able to learn many JavaScript concepts. Some of these include for loops, if else statements, etc. In addition, I was able to learn about programming AI, and how to adjust different components to my advantage.</p>
+    </body>
+
+</html>
