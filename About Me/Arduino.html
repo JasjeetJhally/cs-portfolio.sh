@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <style>
+    #navbar{
+        position:relative;
+         }
+         body{
+             background-color:green;
+         }
     #heading{
         text-align:center;
+        font-family:arial;
+        color:white;
     }
     #Arduino{
         width:500px;
@@ -49,16 +57,79 @@ div {
     75%  {left:810px; bottom:190px;}
     100% {left:750px; bottom:250px;}
 }
+
+#desheading{
+    position:relative;
+    left:20px;
+    top:25px;
+    font-family:arial;
+    font-size:30px;
+    color:white;
+}
+#matheading{
+    position:relative;
+    bottom:415px;
+    left:720px;
+    font-family:arial;
+    font-size:30px;
+    color:white;
+}
+#modelheading{
+    position:relative;
+    bottom:250px;
+    left:300px;
+    font-family:arial;
+    font-size:30px;
+    color:white;
+}
 #description{
     font-size:20px;
     font-family:arial;
+    width:500px;
+    position:relative;
+    bottom:-25px;
+    border:solid;
+    padding:30px;
+    background-color:white;
+}
+#materials{
+    font-size:20px;
+    font-family:arial;
+    width:500px;
+    position:relative;
+    left:700px;
+    bottom:415px;
+    border:solid;
+    padding:30px;
+    background-color:white;
+}
+#model{
+    font-size:20px;
+    font-family:arial;
+    border:solid;
+    width:800px;
+    position:relative;
+    border:solid;
+    padding:30px;
+    bottom:250px;
+    left:250px;
+    background-color:white;
 }
 </style>
 <html>
     <head>
-        <title> </title>
+        <title>ModelWeb</title>
     </head>
     <body>
+         <link rel="stylesheet" href="navbar.css" type="text/css" />
+         <ul id="navbar">
+            <li><a href="index.html "></index>Home</a></li>
+            <li><a href="html-css.html">HTML/CSS</a></li>
+            <li><a href="info.html">InfoSite</a></li>
+            <li><a href="calc.html">Calculator</a></li>
+            <li><a href="text.html">Khaled Game</a></li>
+            <li><a href="Vindinium.html">Vindinium</a></li>
+            </ul>
 <h1 id="heading">Arduino Push Button</h1>
 
 <img id="Arduino" src="https://cdn.sparkfun.com/assets/learn_tutorials/3/1/0/Arduino_circuit_05_01.png">
@@ -71,9 +142,18 @@ function myFunction() {
 }
 </script>
 <div></div>
+
+<h2 id="desheading">Description of Project Model</h2>
 <p id="description">
-    Arduino is electronic platform that allows for the building of interactive electric creations. The microcontroller board that is a part of the Arduino is a able to read inputs. Through the Arduino Programming Language, one can give a set of directions to the microcontroller board. 
-    For my Arduino project, I decided to create a button that, when pushed, can light up an LED light. The buttons are the input, while the lit LED light is the output. For this project, I used two buttons, and LED light, three resistors, and seven wires.     
+   Arduino is an electronic platform that allows for the building of interactive electronic creations. In the Arduino, is a microcontroller board which reads inputs from various pieces available in the Arduino kit. Part of the Arduino kit, is a specific programming that the Arduino reads and applies, By using the Arduino Programming Language, one can give a set of directions to the microcontroller board, which can then be used to put out a variety of outputs. For my Arduino project, I decided to create a button that, when pushed, can light up an LED light. In my case, the action of pushing the buttons is the input, while the lighting of the LED light is the output. 
+</p>
+<h2 id="matheading">Materials Used</h2>
+<p id="materials">
+    For this project, the materials that I used included two buttons, and LED light, three resistors, and seven wires. Each component utilized in this project had a separate function. The buttons served as a platform for the user to give an input. Pressing these buttons will then activates a certain amount of voltage which the Arduino will then recognize. To control the current in the Arduino, the resistors are placed. When the circuit runs in the appropriate manner, it will then light up the LED bulb. 
+</p>
+<h2 id="modelheading">Model</h2>
+<p id="model">
+    To accurately model the way that my Arduino project works, I wanted to digitally recreate the Arduino and where the different parts were placed. Next, to make the web page interactive for the user viewing the page, I wanted to add a button to my digital version of my Arduino that would model the function of the actual button. Pressing this button would make the picture of the unlit button (also pictured in the Arduino), turn into a picture of a lit bulb, similar to the process of pushing the button and having the LED lit up. Another aspect of the Arduino that I wanted to model was the flow of electrons that flow in the wires when the current is active. This was represented by the moving blue rectangular box that followed a part of the wires. To create this moving electron, I used an animation in CSS, which took into account the position of the box during a set interval of time. However, this model is not entirely accurate. While it may be true that electrons do flow into the light bulb, they are suppose to begin moving when the button is pushed, not all the time. 
 </p>
     </body>
 </html>
