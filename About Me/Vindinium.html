@@ -18,17 +18,17 @@
              text-align:center;
              font-family:arial;
          }
-         #heading1{
+         #whatisheading{
              color:black;
              text-align:center;
              font-family:arial;
          }
-         #heading2{
+         #codeAIheading{
              color:black;
              text-align:center;
              font-family:arial;
          }
-         #heading3{
+         #learnheading{
              color:black;
              text-align:center;
              font-family:arial;
@@ -155,6 +155,7 @@
     </head>
     
     <body>
+        <!--Navigation Bar-->
          <link rel="stylesheet" href="navbar.css" type="text/css" />
          <ul id="navbar">
             <li><a href="index.html "></index>Home</a></li>
@@ -163,14 +164,18 @@
             <li><a href="calc.html">Calculator</a></li>
             <li><a href="text.html">Khaled Game</a></li>
             <li><a href="Vindinium.html">Vindinium</a></li>
+            <li><a href="Arduino.html">Arduino Interactive</a></li>
             </ul>
+        <!--Page Main Heading-->    
 <u><h1 id="title">Vindinium</h1></u>
+<!--Vindinium Map -->
 <img id="map" src="https://s3.amazonaws.com/poly-screenshots.angel.co/Project/a0/120663/73d89cbf74dde0cacf22233ec6dc6a79-original.png">
-<u><h1 id="heading1">What is it?</h1></u>
+<!--Heading and Description of Vindinium -->
+<u><h1 id="whatisheading">What is it?</h1></u>
 <p id="whatisit">Vindinium is a turn-based game with four players, also known as heros. The main objective of the game is to collect the most amount of gold in a set amount of total turns; in most cases, this is 1200 turns, with each players receiving 300 turns. In order to collect gold, players must take control of the numerous gold mines located all around the map. To obtain these mines, the player must defeat a goblin guarding the mine. Once defeated, the goblin will then defend the player&rsquo;s mine from other players; the player receives one piece of gold per turn for every mine that they control. In addition to obtaining mines, the players can also attack other players. The survivor of an attack against another player receives control of all the mines that the defeated player had already obtained. A player is killed when their life points have all elapsed, and when killed, the player automatically respawns with all the gold that they previously had, but no control over the mines that they previously acquired. During the game, players can visit taverns that contain <q>cream soda</q>, and restore their life points for the price of a piece of gold. In the end, the hero with the most gold is deemed the winner of the match. 
 </p>
-
-<u><h1 id="heading2">The Code Behind My AI</h1></u>
+<!--This is the portion that explains the bot code-->
+<u><h1 id="codeAIheading">The Code Behind My AI</h1></u>
 <i><h2 id="globalheading">Global Data</h2></i>
 <!--Code Block 1-->
 <div id="rich">
@@ -279,7 +284,8 @@ i < bot.taverns.length, defines the condition being implemented for the for loop
 <p>As stated above, here is how the task, <q>freemines</q> is executed through the bot. A for loop is used in this block of code. The for loop in this block of code contains three statements; i=0, i< bot.freeMines.length, and i++. The first statement, i=0, sets the variable at 0, and is executed before the loop is begins. Next, the second statement,
 i < bot.freeMines.length, defines the condition being implemented for the for loop. In this case, it states that the variable must be less than that of the freeMine&rsquo;s length. The third statement, i++, allows for the loop to increase in value, each time that the code in the block is run. The if conditional that comes with the for loop finds the position of a free mine, and the current position of my bot. It then sees that if my position to a free mine is closer than other players. When this is true, my bot will then move to the free mine and take over the free mine. As this happens, the message <q>Getting this freemine!</q> is posted.</p>
 </div>
-<u><h1 id="heading3">What I learned</h1></u>
+<!--Describes What I Learned in this project-->
+<u><h1 id="learnheading">What I learned</h1></u>
 <p id="whatilearn">Through this project, I was able to learn a lot about coding an AI. Coding an AI was challenging, as a minor error in syntax would result in a dysfuntional bot. However, after much trial and error, testing a successful bot was very rewarding. Seeing the bot perform the actions that I had coded had encouraged me to go even further in trying out more pieces of code that would improve my bot. This led me to solidifing a lot of my previous coding knowledge, and learning more JavaScript code. 
 
 </p>

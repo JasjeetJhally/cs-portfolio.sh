@@ -3,10 +3,11 @@
     #navbar{
         position:relative;
          }
+         
          body{
              background-color:green;
          }
-    #heading{
+    #mainheading{
         text-align:center;
         font-family:arial;
         color:white;
@@ -121,6 +122,7 @@ div {
         <title>ModelWeb</title>
     </head>
     <body>
+        <!--Navigation Bar-->
          <link rel="stylesheet" href="navbar.css" type="text/css" />
          <ul id="navbar">
             <li><a href="index.html "></index>Home</a></li>
@@ -129,28 +131,35 @@ div {
             <li><a href="calc.html">Calculator</a></li>
             <li><a href="text.html">Khaled Game</a></li>
             <li><a href="Vindinium.html">Vindinium</a></li>
+            <li><a href="Arduino.html">Arduino Interactive</a></li>
             </ul>
-<h1 id="heading">Arduino Push Button</h1>
-
+<h1 id="mainheading">Arduino Push Button</h1>
+<!-- Digital Picture of Project-->
 <img id="Arduino" src="https://cdn.sparkfun.com/assets/learn_tutorials/3/1/0/Arduino_circuit_05_01.png">
+<!--Button that will substitute image of unlit bulb with image of lit bulb-->
 <button id="button" onclick ="myFunction()">Button</button>
+<!--Image of unlit bulb that will be substituted when clicking button-->
 <img id="unlitbulb" src="http://i.dailymail.co.uk/i/pix/2014/01/26/article-2546363-1AFB247500000578-934_306x423.jpg">
 
 <script>
+/*Created function for switching images */
 function myFunction() {
+    /*Will take the unlit bulb image and replace it with this url of lit bulb image */
     document.getElementById("unlitbulb").src = "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcToA0h5DkNmQdE9RlmrcuLYBKViGHKL88B0sCtnSz1BEWc_fjge";
 }
 </script>
 <div></div>
-
+<!--Description of Arduino Project-->
 <h2 id="desheading">Description of Project Model</h2>
 <p id="description">
    Arduino is an electronic platform that allows for the building of interactive electronic creations. In the Arduino, is a microcontroller board which reads inputs from various pieces available in the Arduino kit. Part of the Arduino kit, is a specific programming that the Arduino reads and applies, By using the Arduino Programming Language, one can give a set of directions to the microcontroller board, which can then be used to put out a variety of outputs. For my Arduino project, I decided to create a button that, when pushed, can light up an LED light. In my case, the action of pushing the buttons is the input, while the lighting of the LED light is the output. 
 </p>
+<!--Describes Materials used in Project-->
 <h2 id="matheading">Materials Used</h2>
 <p id="materials">
     For this project, the materials that I used included two buttons, and LED light, three resistors, and seven wires. Each component utilized in this project had a separate function. The buttons served as a platform for the user to give an input. Pressing these buttons will then activates a certain amount of voltage which the Arduino will then recognize. To control the current in the Arduino, the resistors are placed. When the circuit runs in the appropriate manner, it will then light up the LED bulb. 
 </p>
+<!--Section that describes what the model is able to do, and what the model means-->
 <h2 id="modelheading">Model</h2>
 <p id="model">
     To accurately model the way that my Arduino project works, I wanted to digitally recreate the Arduino and where the different parts were placed. Next, to make the web page interactive for the user viewing the page, I wanted to add a button to my digital version of my Arduino that would model the function of the actual button. Pressing this button would make the picture of the unlit button (also pictured in the Arduino), turn into a picture of a lit bulb, similar to the process of pushing the button and having the LED lit up. Another aspect of the Arduino that I wanted to model was the flow of electrons that flow in the wires when the current is active. This was represented by the moving blue rectangular box that followed a part of the wires. To create this moving electron, I used an animation in CSS, which took into account the position of the box during a set interval of time. However, this model is not entirely accurate. While it may be true that electrons do flow into the light bulb, they are suppose to begin moving when the button is pushed, not all the time. 
